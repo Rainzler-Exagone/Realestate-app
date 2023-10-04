@@ -1,113 +1,71 @@
+"use client"
 import Image from 'next/image'
+import Head from 'next/head'
+import {BsFillMoonStarsFill} from "react-icons/bs"
+import example from "../public/blob-haikei.svg"
+import { useState } from 'react'
+import "./globals.css"
+import Img1 from "../public/Beluga.jpg"
+import pexels from "../public/RealEstate.jpg"
+import RealEstate from "../public/pexels-the-lazy-artist-gallery-1642125.jpg"
+import RealEstat1 from "../public/RealEState1.jpeg"
+import RealEstat2 from "../public/RealEState2.jpeg"
+import RealEstat3 from "../public/RealEstate3.jpeg"
+import { IoIosArrowBack, IoIosArrowForward } from 'react-icons/io';
+
+
+
+
 
 export default function Home() {
+   const [darkMode, setDarkMode] = useState(false);
+   
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.js</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <div className='relative bg-[url("../public/pexels-the-lazy-artist-gallery-1642125.jpg")]'>
+      <main className='overscroll-contain ' id='r' >
+        {/* Navbar */}
+       <nav className='bg-gray-100 sticky' id='nav'>
+        <div className=' ml-10 mx-auto px-6 py-5 flex justify-between'>
+        <div className=' flex text-5xl font-bold text-black ' id='logo'>
+          <p className='text-orange-400 ' id='Oasis'>Oasis</p>
+          <p className='text-green-400' id='Homes'>Homes</p>
         </div>
-      </div>
+        <div>
+            <ul className='flex absolute right-24 text-black text-s py-auto pt-2.5 '>
+              <li><BsFillMoonStarsFill onClick={() => setDarkMode(!darkMode)} className='mt-1 mr-12  hover:text-yellow-500 delay-200 cursor-pointer ' id='M'/></li>
+              <li className='my-0 mx-5   cursor-pointer font-Cabin ' id='A'>About</li>
+              <li className='my-0 mx-5   cursor-pointer font-Cabin' id='P'>Projects</li>
+              <li className='my-0 mx-5  cursor-pointer font-Cabin' id='C'>Contacts</li>
+            </ul>
+          </div>
+        </div>
+       </nav>
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800 hover:dark:bg-opacity-30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore the Next.js 13 playground.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+       {/* content */}
+       <section className=" relative bg-[url('/public/pexels-the-lazy-artist-gallery-1642125.jpg')] " >
+        <div className='flex content-center justify-center h-screen' id='w' >
+         
+        <div id='RealEstate' className='w-full h-auto  sticky filter brightness-50 ' >
+        <Image src={RealEstate}id='Image' className='  m-30 relative w-full ' ></Image> 
+        </div> 
+        <div className='mt-40 text-7xl font-Lilita absolute text-white indent-8 text-center' id='Welcome'>Welcome to the Best Rental Agencie around
+        </div> 
+        <div className=' absolute grid grid-flow-col gap-10 lg:flex-row mx-14 bottom-0'>
+          <IoIosArrowBack color='white' size={50} className='mt-24 cursor-pointery' />
+          <div className='basis-1/3 flex-1 mt-6'>
+            <Image src={RealEstat1}  className='rounded-lg object-cover aspect-4/3 '></Image>
+          </div>
+          <div className='basis-1/3 flex-1 mt-6'>
+          <Image src={RealEstat2}  className='rounded-lg object-cover aspect-4/3'></Image>
+          </div>
+          <div className='basis-1/3 flex-1 mt-6'>
+          <Image src={RealEstat3}  className='rounded-lg object-cover aspect-4/3'></Image>
+          </div>
+          <IoIosArrowForward  color='white' size={50} className='mt-24 cursor-pointer'  />
+        </div>
+        </div>
+       </section>
+      </main>
+    </div>
   )
 }

@@ -1,6 +1,21 @@
+@import url('//public/fonts/against\ regular.otf');
+@import url('https://fonts.googleapis.com/css2?family=Fuggles&display=swap');
+@import url('/public/fonts/Skranji-Bold.ttf');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oxygen&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cabin&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family: "Against";
+  src: url("/public/fonts/against\ regular.otf");
+  font-weight: normal;
+  font-style:normal ;
+}
 
 :root {
   --foreground-rgb: 0, 0, 0;
@@ -8,20 +23,126 @@
   --background-end-rgb: 255, 255, 255;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+#logo{
+  font-family: 'Fuggles', 'cursive';
+}
+#M{
+  transition-property: transform;
+  transition-duration: 0.2s;
+  transition-timing-function: ease;
+  transition-delay: 0s;
+ }
+ 
+
+#A{
+ transition-property: transform;
+ transition-duration: 0.2s;
+ transition-timing-function: ease;
+ transition-delay: 0s;
+}
+#A:hover{
+  transform: translateY(-5px);
+}
+#P{
+  transition-property: transform;
+  transition-duration: 0.2s;
+  transition-timing-function: ease;
+  transition-delay: 0s;
+ }
+#P:hover{
+  transform: translateY(-5px);
+}
+#C{
+  transition-property: transform;
+  transition-duration: 0.2s;
+  transition-timing-function: ease;
+  transition-delay: 0s;
+ }
+#C:hover{
+  transform: translateY(-5px);
+}
+
+@keyframes slidTop {
+  from{
+    transform: translateY(-100px);
+  }
+
+  to{
+    transform: translateY(0);
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+#Oasis{
+  animation-name: slidTop;
+  animation-duration: 1s;
+  animation-timing-function: ease-in ;
+  animation-delay: 0s;
+  animation-fill-mode: none;
+  animation-iteration-count: 1;
 }
+#Homes{
+  animation-name: slidTop;
+  animation-duration: 1s;
+  animation-timing-function: ease-in ;
+  animation-delay: 0s;
+  animation-fill-mode: none;
+  animation-iteration-count: 1;
+}
+#M{
+  animation-name: slidTop;
+  animation-duration: 1.3s;
+  animation-timing-function: ease-in ;
+  animation-delay: 0s;
+  animation-fill-mode: none;
+  animation-iteration-count: 1;
+}
+#A{
+  animation-name: slidTop;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-in ;
+  animation-delay: 0s;
+  animation-fill-mode: none;
+  animation-iteration-count: 1;
+}
+#P{
+  animation-name: slidTop;
+  animation-duration: 1.6s;
+  animation-timing-function: ease-in ;
+  animation-delay: 0s;
+  animation-fill-mode: none;
+  animation-iteration-count: 1;
+}
+#C{
+  animation-name: slidTop;
+  animation-duration: 1.7s;
+  animation-timing-function: ease-in ;
+  animation-delay: 0s;
+  animation-fill-mode: none;
+  animation-iteration-count: 1;
+}
+@keyframes slidInside {
+  from{
+    transform: translateX(300);
+  }
+
+  to{
+    transform: translateX(0);
+  }
+}
+
+#w{
+  animation: sliInside 1s ease-in 1s 1 normal none;
+}
+#Welcome{
+  z-index: 100;
+}
+#NoWrap{
+  white-space: nowrap;
+}
+#n{
+  white-space: nowrap;
+}
+#r{
+  overscroll-behavior-inline: contain;
+}
+

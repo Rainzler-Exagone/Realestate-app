@@ -9,7 +9,7 @@ import Img1 from "../public/Beluga.jpg"
 import pexels from "../public/RealEstate.jpg"
 import RealEstate from "./../public/pexels-the-lazy-artist-gallery-1642125.jpg"
 import RealEstat1 from "./../public/realEState1.jpeg"
-import RealEstat2 from "../public/realEState2.jpeg"
+import RealEstat2 from "../public/realEstate2.jpeg"
 import RealEstat3 from "../public/realEstate3.jpeg"
 import { IoIosArrowBack, IoIosArrowForward } from 'react-icons/io';
 

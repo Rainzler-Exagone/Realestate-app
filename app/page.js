@@ -61,6 +61,10 @@ export default function Home() {
           <div className='basis-1/3 flex-1 mt-6'>
           <Image src={RealEstat3}  className='rounded-lg object-cover aspect-4/3'></Image>
           </div>
+          <div className='basis-1/3 flex-1 mt-6 ' id='H'>
+          <Image src={RealEstat3}  className='rounded-lg object-cover aspect-4/3  cursor-pointer'></Image>
+          </div>
+          
           <IoIosArrowForward  color='white' size={50} className='mt-24 cursor-pointer'  />
         </div>
         </div>

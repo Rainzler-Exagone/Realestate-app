@@ -1,4 +1,5 @@
 "use client"
+import React from 'react'
 import Image from 'next/image'
 import Head from 'next/head'
 import {BsFillMoonStarsFill} from "react-icons/bs"
@@ -12,6 +13,7 @@ import RealEstat1 from "./../public/realestate1.jpeg"
 import RealEstat2 from "../public/realestate2.jpeg"
 import RealEstat3 from "../public/realestate3.jpeg"
 import { IoIosArrowBack, IoIosArrowForward } from 'react-icons/io';
+import {data} from "./MockData"
 
 
 
@@ -20,6 +22,15 @@ import { IoIosArrowBack, IoIosArrowForward } from 'react-icons/io';
 export default function Home() {
    const [darkMode, setDarkMode] = useState(false);
    
+   const slideLeft = () =>{
+    var slider = document.getElementById('Slider')
+    slider.scrollLeft= slider.scrollLeft - 500
+   }
+
+   const slideRight = () =>{
+    var slider = document.getElementById('Slider')
+    slider.scrollLeft= slider.scrollLeft + 500;
+   }
   return (
     <div className='relative bg-[url("../public/pexels-the-lazy-artist-gallery-1642125.jpg")]'>
       <main className='overscroll-contain ' id='r' >
@@ -50,8 +61,23 @@ export default function Home() {
         </div> 
         <div className='mt-40 text-7xl font-Lilita absolute text-white indent-8 text-center' id='Welcome'>Welcome to the Best Rental Agencie around
         </div> 
-        <div className=' absolute grid grid-flow-col gap-10 lg:flex-row mx-14 bottom-0'>
-          <IoIosArrowBack color='white' size={50} className='mt-24 cursor-pointery' />
+        <div className=' absolute flex items-center lg:flex-row mx-14 bottom-0'>
+
+
+          <IoIosArrowBack color='white' size={50} className=' cursor-pointer' onClick={slideLeft} />
+          <div className='w-full h-full overflow-x-scroll scroll whitespace-nowrap scroll-smooth scrollbar-hide' id='Slider'>
+          {data.map((item)=>
+          (
+            <img 
+              className="w-[220px] aspect-4/3 rounded-2xl object-cover inline-block p-2 cursor-pointer hover:scale-105 ease-in-out duration-300" 
+              src={item.img} 
+              alt='/' 
+            />
+          ))}
+          </div>
+          <IoIosArrowForward  color='white' size={40} className=' cursor-pointer' onClick={slideRight} />
+          
+          {/* 
           <div className='basis-1/3 flex-1 mt-6'>
             <Image src={RealEstat1}  className='rounded-lg object-cover aspect-4/3 '></Image>
           </div>
@@ -65,7 +91,7 @@ export default function Home() {
           <Image src={RealEstat3}  className='rounded-lg object-cover aspect-4/3  cursor-pointer'></Image>
           </div>
           
-          <IoIosArrowForward  color='white' size={50} className='mt-24 cursor-pointer'  />
+           */}
         </div>
         </div>
        </section>

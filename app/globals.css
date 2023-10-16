@@ -122,11 +122,11 @@
 }
 @keyframes slidInside {
   from{
-    transform: translateX(300);
+    transform: translateY(300px);
   }
 
   to{
-    transform: translateX(0);
+    transform: translateY(0);
   }
 }
 
@@ -152,3 +152,20 @@
   animation-delay: 0s;
 }
 
+@keyframes slidUpside {
+  from{
+    transform: translateY(100px);
+  }
+
+  to{
+    transform: translateY(0);
+  }
+}
+#Slider{
+  animation-name: slidUpside;
+  animation-duration: 1.6s;
+  animation-timing-function: ease-in ;
+  animation-delay: 0s;
+  animation-fill-mode: none;
+  animation-iteration-count: 1;
+}

@@ -34,14 +34,14 @@ export default function Home() {
     <div className={ darkMode ? 'dark' : ""}>
       <main className='overscroll-contain ' id='r' >
         {/* Navbar */}
-       <nav className='bg-gray-100 sticky  ' id='nav'>
+       <nav className='bg-gray-100 sticky dark:bg-black ease-in  ' id='nav'>
         <div className=' ml-10 mx-auto px-6 py-5 flex justify-between'>
         <div className=' flex text-5xl font-bold text-black ' id='logo'>
           <p className='text-orange-400 ' id='Oasis'>Oasis</p>
           <p className='text-green-400' id='Homes'>Homes</p>
         </div>
         <div>
-            <ul className='flex absolute right-24 text-black text-s py-auto pt-2.5 '>
+            <ul className='flex absolute right-24 text-black text-s py-auto pt-2.5 dark:text-white'>
               <li><BsFillMoonStarsFill onClick={() => setDarkMode(!darkMode)} className='mt-1 mr-12  hover:text-yellow-500 delay-200 cursor-pointer ' id='M'/></li>
               <li className='my-0 mx-5   cursor-pointer font-Cabin ' id='A'>About</li>
               <li className='my-0 mx-5   cursor-pointer font-Cabin' id='P'>Projects</li>

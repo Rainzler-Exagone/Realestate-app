@@ -24,6 +24,9 @@ module.exports = {
       aspectRatio: {
         '4/3': '4 / 3',
       },
+      colors:{
+        midnight : '#142734'
+      }
     },
   },
   plugins: [

@@ -18,7 +18,7 @@ import {data} from "./MockData"
 
 
 export default function Home() {
-   const [darkMode, setDarkMode] = useState(true);
+   const [darkMode, setDarkMode] = useState(false);
    
    const slideLeft = () =>{
     var slider = document.getElementById('Slider')
@@ -34,14 +34,14 @@ export default function Home() {
     <div className={ darkMode ? 'dark' : ""}>
       <main className='overscroll-contain ' id='r' >
         {/* Navbar */}
-       <nav className='bg-gray-100 sticky dark:bg-black ease-in  ' id='nav'>
-        <div className=' ml-10 mx-auto px-6 py-5 flex justify-between'>
-        <div className=' flex text-5xl font-bold text-black ' id='logo'>
+       <nav className='bg-gray-100 sticky dark:bg-midnight ease-in  ' id='nav'>
+        <div className=' ml-10 mx-auto md:px-6 py-5 flex justify-between'>
+        <div className=' text-2xl flex md:text-5xl font-bold text-black ' id='logo'>
           <p className='text-orange-400 ' id='Oasis'>Oasis</p>
           <p className='text-green-400' id='Homes'>Homes</p>
         </div>
-        <div>
-            <ul className='flex absolute right-24 text-black text-s py-auto pt-2.5 dark:text-white'>
+        <div className='flex md:flex-row'>
+            <ul className=' hidden md:flex right-24 text-black text-s py-auto pt-2.5 dark:text-white'>
               <li><BsFillMoonStarsFill onClick={() => setDarkMode(!darkMode)} className='mt-1 mr-12  hover:text-yellow-500 delay-200 cursor-pointer ' id='M'/></li>
               <li className='my-0 mx-5   cursor-pointer font-Cabin ' id='A'>About</li>
               <li className='my-0 mx-5   cursor-pointer font-Cabin' id='P'>Projects</li>
@@ -52,18 +52,17 @@ export default function Home() {
        </nav>
 
        {/* content */}
-       <section className=" relative bg-[url('/public/pexels-the-lazy-artist-gallery-1642125.jpg')] " >
+       <section className=" relative " >
         <div className='flex content-center justify-center h-screen' id='w' >
          
         <div id='RealEstate' className='w-full h-auto  sticky filter brightness-50 ' >
-        <Image src={RealEstate}id='Image' className='  m-30 relative w-full ' ></Image> 
+        <Image src={RealEstate}id='Image' className='m-30 relative w-full ' ></Image> 
         </div> 
-        <div className='mt-52 text-7xl font-Lilita absolute text-white indent-8 text-center' id='Welcome'>Welcome to the Best Real Estate Agencie around
+        <div className='text-5xl md:text-7xl mt-52 font-Lilita absolute text-white indent-8 text-center dark:text-midnight ' id='Welcome'><p>Welcome to the Best Real Estate Agencie around</p>
         </div> 
-        <div className=' absolute flex items-center lg:flex-row mx-14 bottom-0'>
-
-
-          <IoIosArrowBack color='white' size={50} className=' cursor-pointer' onClick={slideLeft} />
+        <div className='absolute flex flex-row items-center mx-14 bottom-0'>
+        
+        <IoIosArrowBack color='white' size={50} className=' cursor-pointer' onClick={slideLeft} />
           
           <div className='w-full h-full overflow-x-scroll scroll whitespace-nowrap scroll-smooth scrollbar-hide ' id='Slider'>
           {data.map((item)=>

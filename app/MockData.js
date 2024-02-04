@@ -1,7 +1,7 @@
  export const data = [
     {
         id: 1,
-        img: "https://th.bing.com/th/id/R.923b5892236f2953d8c22ae7f7e3e707?rik=6zbVtbcKB7qu8g&pid=ImgRaw&r=0"
+        img: "https://th.bing.com/th/id/R.2fc52e6262f5b0230906384540d704a5?rik=5HBj%2b19ERlBB0g&riu=http%3a%2f%2fap.rdcpix.com%2f1745011672%2f42d7007fa524671280e54b930a29fd04l-m0l.jpg&ehk=cGSqhPmwphAi2Rg9zbhTkF6R7sJgeAIRGdisBjqFxSw%3d&risl=&pid=ImgRaw&r=0"
     },
     {
         id: 2,
